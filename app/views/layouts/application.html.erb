@@ -12,8 +12,12 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <!-- navbar -->
+    <%= render 'shared/navbar' %>
+
+    <!-- alertes et messages liés à devise -->
+    <%= render 'shared/flashes' %>
+
     <%= yield %>
   </body>
 </html>
