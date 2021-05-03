@@ -1,0 +1,24 @@
+<h1>Showing selected article</h1>
+
+<h2>
+  <%= @article.title %>
+</h2>
+
+<p>
+  Catégorie : <%= @article.category %>
+</p>
+
+<p>
+  Temps de lecture : <%= @article.reading_time %>
+</p>
+
+<p>
+  <%= @article.description %>
+</p>
+
+<%= link_to "Mettre à jour", edit_article_path(@article) %>
+
+<%= link_to 'Supprimer', article_path(@article), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %>
+
+<!-- bouton back -->
+<%= link_to 'Retour', articles_path %>
