@@ -18,6 +18,13 @@
     <!-- alertes et messages liés à devise -->
     <%= render 'shared/flashes' %>
 
+    <!-- messages liés aux articles -->
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li><%= msg %></li>
+      </ul>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,21 @@
+<h1>Listing all articles</h1>
+
+<table>
+ <tr>
+  <th>Titre</th>
+  <th>Temps de lecture</th>
+  <th>Catégorie</th>
+  <th>Description</th>
+ </tr>
+ <% @article.each do |article| %>
+ <tr>
+  <td><%= article.title %></td>
+  <td><%= article.reading_time %></td>
+  <td><%= article.category %></td>
+  <td><%= article.description %></td>
+  <td><%= link_to 'Mettre à jour', edit_article_path(article) %></td>
+  <td><%= link_to 'Lire', article_path(article) %></td>
+  <td><%= link_to 'Supprimer', article_path(article), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %></td>
+ </tr>
+ <% end %>
+</table>
