@@ -7,10 +7,11 @@
   <th>Catégorie</th>
   <th>Description</th>
  </tr>
+
  <% @article.each do |article| %>
  <tr>
   <td><%= article.title %></td>
-  <td><%= article.reading_time %></td>
+  <td><%= article.reading_time %> minutes</td>
   <td><%= article.category %></td>
   <td><%= article.description %></td>
   <td><%= link_to 'Mettre à jour', edit_article_path(article) %></td>
