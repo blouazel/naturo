@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def new
     @article = Article.new
