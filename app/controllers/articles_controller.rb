@@ -4,17 +4,21 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    authorize @article
   end
 
   def create
+    authorize @article
     # render plain: params[:article].inspect
     @article = Article.new(article_params)
+    @article.user = current_user
     if @article.save
       flash[:notice] = "Votre article a été crée avec succès !"
       redirect_to article_path(@article)
     else
       render 'new'
     end
+
   end
 
   def show
@@ -51,5 +55,6 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
+    authorize @article
   end
 end

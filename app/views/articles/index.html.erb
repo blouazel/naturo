@@ -7,15 +7,25 @@
   <th>Catégorie</th>
   <th>Description</th>
  </tr>
+
  <% @article.each do |article| %>
  <tr>
   <td><%= article.title %></td>
-  <td><%= article.reading_time %></td>
+  <td><%= article.reading_time %> minutes</td>
   <td><%= article.category %></td>
   <td><%= article.description %></td>
-  <td><%= link_to 'Mettre à jour', edit_article_path(article) %></td>
   <td><%= link_to 'Lire', article_path(article) %></td>
-  <td><%= link_to 'Supprimer', article_path(article), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %></td>
+  <% if policy(article).edit? %>
+    <td><%= link_to 'Mettre à jour', edit_article_path(article) %></td>
+  <% end %>
+  <% if policy(article).destroy? %>
+    <td><%= link_to 'Supprimer', article_path(article), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %></td>
+  <% end %>
  </tr>
  <% end %>
 </table>
+
+
+<% if policy(Article.new).create? %>
+  <%= link_to 'Nouvel article', new_article_path %>
+<% end %>
