@@ -31,8 +31,16 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
-gem 'devise' # Authentication
-gem 'pundit' # Authorization
+
+# Authentication
+gem 'devise'
+
+# Authorization
+gem 'pundit'
+
+# Administration
+gem 'rails_admin', '~> 2.0'
+gem 'rails_admin-i18n' # Translation for rails_admin
 
 group :development, :test do
   gem 'pry-byebug'
