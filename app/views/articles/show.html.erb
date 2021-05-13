@@ -16,9 +16,13 @@
   <%= @article.description %>
 </p>
 
-<%= link_to "Mettre à jour", edit_article_path(@article) %>
+<% if policy(@article).edit? %>
+  <%= link_to "Mettre à jour", edit_article_path(@article) %>
+<% end %>
 
-<%= link_to 'Supprimer', article_path(@article), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %>
+<% if policy(@article).destroy? %>
+  <%= link_to 'Supprimer', article_path(@article), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %>
+<% end %>
 
 <!-- bouton back -->
 <%= link_to 'Retour', articles_path %>
