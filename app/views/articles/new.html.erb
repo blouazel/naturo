@@ -14,9 +14,10 @@
     <%= f.text_field :category %>
   </p>
   <p>
-    <%= f.label :description, "Texte" %><br>
-    <%= f.text_area :description %>
+    <%= f.label :rich_body, "Texte" %><br>
+    <%= f.rich_text_area :rich_body %>
   </p>
+
   <p>
     <%= f.submit "Créer l'article", class: 'btn btn-primary' %>
   </p>
