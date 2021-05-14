@@ -32,6 +32,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+# Categories and sub-categories for Article model
+gem 'ancestry'
+
 # Authentication
 gem 'devise'
 

@@ -1,0 +1,24 @@
+<h1>Listing all categories</h1>
+
+<table>
+ <tr>
+  <th>Nom</th>
+ </tr>
+
+ <% @category.each do |category| %>
+ <tr>
+  <td><%= category.name %></td>
+  <% if policy(category).edit? %>
+    <td><%= link_to 'Mettre à jour', edit_category_path(category) %></td>
+  <% end %>
+  <% if policy(category).destroy? %>
+    <td><%= link_to 'Supprimer', category_path(category), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %></td>
+  <% end %>
+ </tr>
+ <% end %>
+</table>
+
+
+<% if policy(Category.new).create? %>
+  <%= link_to 'Nouvelle catégorie', new_category_path %>
+<% end %>
