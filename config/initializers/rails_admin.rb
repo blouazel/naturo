@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-
+  config.included_models = ["User", "Article"]
   ## == Devise ==
   config.authenticate_with do
     warden.authenticate! scope: :user

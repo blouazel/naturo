@@ -4,4 +4,6 @@ class Article < ApplicationRecord
   validates :category, presence: true
   belongs_to :user, optional: true
   has_rich_text :rich_body
+
+  #CATEGORIES = ['Santé', 'Santé au féminin', 'Recettes', 'Bien-être', 'Lifestyle']
 end
