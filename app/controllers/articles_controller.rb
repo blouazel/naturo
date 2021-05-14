@@ -8,17 +8,16 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    authorize @article
     # render plain: params[:article].inspect
     @article = Article.new(article_params)
     @article.user = current_user
+    authorize @article
     if @article.save
       flash[:notice] = "Votre article a été crée avec succès !"
       redirect_to article_path(@article)
     else
       render 'new'
     end
-
   end
 
   def show
@@ -50,7 +49,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :reading_time, :category, :user_id)
+    params.require(:article).permit(:title, :description, :reading_time, :category, :user_id, :rich_body)
   end
 
   def set_article
