@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
 
-  config.included_models = ["User", "Article", "Category"]
+  config.included_models = ["User", "Article", "Category", "Subcategory"]
   ### Popular gems integration
 
   ## == Devise ==

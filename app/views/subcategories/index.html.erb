@@ -1,0 +1,24 @@
+<h1>Listing all subcategories</h1>
+
+<table>
+ <tr>
+  <th>Nom</th>
+ </tr>
+
+ <% @subcategory.each do |subcategory| %>
+ <tr>
+  <td><%= subcategory.name %></td>
+  <% if policy(subcategory).edit? %>
+    <td><%= link_to 'Mettre à jour', edit_subcategory_path(subcategory) %></td>
+  <% end %>
+  <% if policy(subcategory).destroy? %>
+    <td><%= link_to 'Supprimer', subcategory_path(subcategory), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %></td>
+  <% end %>
+ </tr>
+ <% end %>
+</table>
+
+
+<% if policy(Subcategory.new).create? %>
+  <%= link_to 'Nouvelle sous-catégorie', new_subcategory_path %>
+<% end %>

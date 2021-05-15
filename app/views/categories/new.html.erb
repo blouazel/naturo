@@ -7,11 +7,6 @@
   </p>
 
   <p>
-    <%#= f.label :ancestry %><br />
-    <%#= f.collection_select :ancestry, Category.all(:order => "title"), :id, :title, :include_blank => true %>
-  </p>
-
-  <p>
     <%= f.submit "Créer la nouvelle catégorie", class: 'btn btn-primary' %>
   </p>
 <% end %>

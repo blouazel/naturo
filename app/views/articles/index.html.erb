@@ -12,7 +12,7 @@
  <tr>
   <td><%= article.title %></td>
   <td><%= article.reading_time %> minutes</td>
-  <td><%= article.ancestry %></td>
+  <td><%#= article.category_id %></td>
   <td><%= article.description %></td>
   <td><%= link_to 'Lire', article_path(article) %></td>
   <% if policy(article).edit? %>
