@@ -1,0 +1,29 @@
+<h1>Create a subcategory</h1>
+
+<%= form_for @subcategory do |f| %>
+  <p>
+    <%= f.label :category_id, "Choisir la catégorie :" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </p>
+
+  <p>
+    <%= f.label :name, "Nom" %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Créer la nouvelle sous-catégorie", class: 'btn btn-primary' %>
+  </p>
+<% end %>
+  <!-- bouton back -->
+  <%= link_to 'Retour', subcategories_path %>
+
+<!-- affiche un message si erreur présente -->
+<% if @subcategory.errors.any? %>
+   <h2>Les erreurs suivantes ont empêché la sauvegarde de la nouvelle sous-catégorie :</h2>
+   <ul>
+      <% @subcategory.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+      <% end %>
+   </ul>
+<% end %>

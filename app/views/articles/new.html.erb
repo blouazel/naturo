@@ -5,14 +5,22 @@
     <%= f.label :title, "Titre" %>
     <%= f.text_field :title %>
   </p>
+
   <p>
+    <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
+    <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
+  </p>
+
+  <!--<p>
     <%= f.label :reading_time, "Temps de lecture" %>
     <%= f.text_field :reading_time %>
-  </p>
+  </p>-->
+
   <p>
-    <%= f.label :category, "Catégorie" %>
-    <%= f.select :category, [['Santé', 1], ['Santé au féminin', 2], ['Recettes', 3], ['Bien-être', 4], ['Lifestyle', 5]] %>
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description %>
   </p>
+
   <p>
     <%= f.label :rich_body, "Texte" %><br>
     <%= f.rich_text_area :rich_body %>

@@ -5,12 +5,16 @@
 </h2>
 
 <p>
-  Catégorie : <%= @article.category %>
+  Catégorie : <%= @article.category.name %>
 </p>
 
 <p>
-  Temps de lecture : <%= @article.reading_time %>
+  Sous-catégorie : <%= @article.subcategory.name %>
 </p>
+
+<!--<p>
+  Temps de lecture : <%= @article.reading_time %>
+</p>-->
 
 <p>
   <%= @article.rich_body %>

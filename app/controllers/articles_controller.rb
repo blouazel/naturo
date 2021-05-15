@@ -8,7 +8,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # render plain: params[:article].inspect
     @article = Article.new(article_params)
     @article.user = current_user
     authorize @article
@@ -49,7 +48,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :description, :reading_time, :category, :user_id, :rich_body)
+    params.require(:article).permit(:title, :description, :reading_time, :category_id, :subcategory_id, :user_id, :rich_body)
   end
 
   def set_article

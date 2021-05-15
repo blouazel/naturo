@@ -1,0 +1,16 @@
+<h1>Showing selected category</h1>
+
+<h2>
+  <%= @category.name %>
+</h2>
+
+<% if policy(@category).edit? %>
+  <%= link_to "Mettre à jour", edit_category_path(@category) %>
+<% end %>
+
+<% if policy(@category).destroy? %>
+  <%= link_to 'Supprimer', category_path(@category), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %>
+<% end %>
+
+<!-- bouton back -->
+<%= link_to 'Retour', categories_path %>

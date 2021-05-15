@@ -1,0 +1,20 @@
+<h1>Showing selected subcategory</h1>
+
+<h2>
+  <%= @subcategory.category.name %>
+</h2>
+
+<h2>
+  <%= @subcategory.name %>
+</h2>
+
+<% if policy(@subcategory).edit? %>
+  <%= link_to "Mettre à jour", edit_subcategory_path(@subcategory) %>
+<% end %>
+
+<% if policy(@subcategory).destroy? %>
+  <%= link_to 'Supprimer', subcategory_path(@subcategory), method: :delete, data: {confirm: "Êtes-vous sûr ?"} %>
+<% end %>
+
+<!-- bouton back -->
+<%= link_to 'Retour', subcategories_path %>

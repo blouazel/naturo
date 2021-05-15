@@ -3,16 +3,18 @@
 <table>
  <tr>
   <th>Titre</th>
-  <th>Temps de lecture</th>
+  <!--<th>Temps de lecture</th>-->
   <th>Catégorie</th>
+  <th>Sous-catégorie</th>
   <th>Description</th>
  </tr>
 
  <% @article.each do |article| %>
  <tr>
   <td><%= article.title %></td>
-  <td><%= article.reading_time %> minutes</td>
-  <td><%= article.category %></td>
+  <!--<td><%= article.reading_time %> minutes</td>-->
+  <td><%= article.category.name %></td>
+  <td><%= article.subcategory.name %></td>
   <td><%= article.description %></td>
   <td><%= link_to 'Lire', article_path(article) %></td>
   <% if policy(article).edit? %>

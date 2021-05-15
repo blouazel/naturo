@@ -1,0 +1,24 @@
+<h1>Create a category</h1>
+
+<%= form_for @category do |f| %>
+  <p>
+    <%= f.label :name, "Nom" %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Créer la nouvelle catégorie", class: 'btn btn-primary' %>
+  </p>
+<% end %>
+  <!-- bouton back -->
+  <%= link_to 'Retour', categories_path %>
+
+<!-- affiche un message si erreur présente -->
+<% if @category.errors.any? %>
+   <h2>Les erreurs suivantes ont empêché la sauvegarde de la nouvelle catégorie :</h2>
+   <ul>
+      <% @category.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+      <% end %>
+   </ul>
+<% end %>

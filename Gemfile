@@ -31,6 +31,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+#gem 'coffee-rails'
+
+# Categories and sub-categories for Article model
+gem 'ancestry'
 
 # Authentication
 gem 'devise'
