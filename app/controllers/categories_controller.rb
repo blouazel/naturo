@@ -13,7 +13,6 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.save
-    #@category.user = current_user
     authorize @category
     if @category.save
       flash[:notice] = "Votre catégorie a été créée avec succès !"

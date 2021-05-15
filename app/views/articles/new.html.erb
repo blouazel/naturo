@@ -7,13 +7,13 @@
   </p>
 
   <p>
-    <%= f.label :category_id, "Choisir la catégorie :" %>
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
+    <%#= f.label :category_id, "Choisir la catégorie :" %>
+    <%#= f.collection_select :category_id, Category.all, :id, :name, { id: 'category-select'} %>
   </p>
 
   <p>
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
-    <%= f.collection_select :subcategory_id, Subcategory.self, :id, :name %>
+    <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
   </p>
 
   <p>
