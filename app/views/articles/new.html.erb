@@ -7,18 +7,18 @@
   </p>
 
   <p>
-    <%#= f.label :category_id, "Choisir la catégorie :" %>
-    <%#= f.collection_select :category_id, Category.all, :id, :name, { id: 'category-select'} %>
-  </p>
-
-  <p>
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
     <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
   </p>
 
-  <p>
+  <!--<p>
     <%= f.label :reading_time, "Temps de lecture" %>
     <%= f.text_field :reading_time %>
+  </p>-->
+
+  <p>
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description %>
   </p>
 
   <p>

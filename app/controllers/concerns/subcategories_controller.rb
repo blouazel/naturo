@@ -13,7 +13,6 @@ class SubcategoriesController < ApplicationController
   def create
     @subcategory = Subcategory.new(subcategory_params)
     @subcategory.save
-    #@subcategory.user = current_user
     authorize @subcategory
     if @subcategory.save
       flash[:notice] = "Votre sous-catégorie a été créée avec succès !"
