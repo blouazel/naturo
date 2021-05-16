@@ -7,6 +7,11 @@
   </p>
 
   <p>
+    <%= f.label :photo, "Image" %>
+    <%= f.file_field :photo %>
+  </p>
+
+  <p>
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
     <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
   </p>
