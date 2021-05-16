@@ -47,6 +47,8 @@ gem 'rails_admin', '~> 2.0'
 gem 'rails_admin-i18n' # Translation for rails_admin
 
 group :development, :test do
+  gem 'dotenv-rails'
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
