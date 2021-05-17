@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: naturo_production
-  username: naturo
-  password: <%= ENV['NATURO_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
