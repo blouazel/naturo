@@ -34,7 +34,7 @@ gem 'simple_form'
 #gem 'coffee-rails'
 
 # Categories and sub-categories for Article model
-gem 'ancestry'
+#gem 'ancestry'
 
 # Authentication
 gem 'devise'
