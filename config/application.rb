@@ -7,9 +7,9 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 # debug test 19 mai 2021
-config.assets.configure do |env|
-  env.export_concurrent = false
-end
+#config.assets.configure do |env|
+ # env.export_concurrent = false
+#end
 
 module Naturo
   class Application < Rails::Application
