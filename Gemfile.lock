@@ -326,6 +326,7 @@ DEPENDENCIES
   rails_admin (~> 2.0)
   rails_admin-i18n
   sass-rails (>= 6)
+  sassc (~> 2.0, >= 2.0.1)
   selenium-webdriver
   simple_form
   spring

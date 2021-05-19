@@ -13,7 +13,7 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 
 # degug trial 19 mai 2021
-# gem 'sassc', '~> 2.0', '>= 2.0.1'
+gem 'sassc', '~> 2.0', '>= 2.0.1'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'

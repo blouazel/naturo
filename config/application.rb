@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# debug test 19 mai 2021
+config.assets.configure do |env|
+  env.export_concurrent = false
+end
+
 module Naturo
   class Application < Rails::Application
     config.generators do |generate|
