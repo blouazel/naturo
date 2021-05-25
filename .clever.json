@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_441064a8-b056-4100-851a-3a1aac94df13",
+      "org_id": "orga_388a131f-a699-4cb2-a9f9-8a8de1dfcd4e",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_441064a8-b056-4100-851a-3a1aac94df13.git",
+      "name": "just-o-naturel",
+      "alias": "just-o-naturel"
+    }
+  ]
+}
