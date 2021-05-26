@@ -11,21 +11,21 @@
     <%= f.file_field :photo %>
   </p>
 
-  <p>
+  <!--<p>
     <%= f.label :category, "Choisir la catégorie :"  %>
-    <%= f.collection_select :category_id, Category.order(:name), :id, :name %>
+    <%= f.select :category, ["Santé", "Recettes", "Bien-être", "Santé au féminin", "Parentalité", "Lifestyle"] %>
   </p>
 
   <p>
     <%= f.label :subcategory, "Choisir la sous-catégorie :"  %>
     <%= f.select :subcategory, Subcategory.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
-  </p>
+  </p>-->
 
-  <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :
+  <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :-->
   <p>
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
     <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
-  </p>-->
+  </p>
 
   <!--<p>
     <%= f.label :reading_time, "Temps de lecture" %>
