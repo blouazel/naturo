@@ -13,7 +13,7 @@
 
   <p>
     <%= f.label :category, "Choisir la catégorie :"  %>
-    <%= f.select :category, Category.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
+    <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "category_name", f.object.category_id) %>
   </p>
 
   <p>
