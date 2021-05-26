@@ -1,15 +1,15 @@
 <h1>Create an article</h1>
 
 <%= form_for @article do |f| %>
-  <p>
+
     <%= f.label :title, "Titre" %>
     <%= f.text_field :title %>
-  </p>
 
-  <p>
+
+
     <%= f.label :photo, "Image" %>
     <%= f.file_field :photo %>
-  </p>
+
 
   <!--<p>
     <%= f.label :category, "Choisir la catégorie :"  %>
@@ -22,29 +22,29 @@
   </p>-->
 
   <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :-->
-  <p>
+
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
     <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
-  </p>
+
 
   <!--<p>
     <%= f.label :reading_time, "Temps de lecture" %>
     <%= f.text_field :reading_time %>
   </p>-->
 
-  <p>
+
     <%= f.label :description, "Description" %>
     <%= f.text_area :description %>
-  </p>
 
-  <p>
+
+
     <%= f.label :rich_body, "Texte" %><br>
     <%= f.rich_text_area :rich_body %>
-  </p>
 
-  <p>
+
+
     <%= f.submit "Créer l'article", class: 'btn btn-primary' %>
-  </p>
+
 <% end %>
   <!-- bouton back -->
   <%= link_to 'Retour', articles_path %>
