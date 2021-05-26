@@ -12,9 +12,20 @@
   </p>
 
   <p>
+    <%= f.label :category, "Choisir la catégorie :"  %>
+    <%= f.select :category, Category.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
+  </p>
+
+  <p>
+    <%= f.label :subcategory, "Choisir la sous-catégorie :"  %>
+    <%= f.select :subcategory, Subcategory.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
+  </p>
+
+  <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :
+  <p>
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
     <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
-  </p>
+  </p>-->
 
   <!--<p>
     <%= f.label :reading_time, "Temps de lecture" %>
