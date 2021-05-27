@@ -1,19 +1,37 @@
 <h1>Create an article</h1>
 
-<%= form_for @article do |f| %>
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.association :category, label: "Catégorie" %>
+  <%= f.association :subcategory, label: "Sous-catégorie" %>
+  <%= f.input :photo, as: :file, label: "image" %>
+  <%= f.input :description, label: "Description" %>
+  <%= f.input :rich_body, as: :rich_text_area, label: "Texte" %>
+  <%= f.button :submit %>
+<% end %>
 
+<!--<%= form_for @article do |f| %>
+  <p>
     <%= f.label :title, "Titre" %>
     <%= f.text_field :title %>
+  </p>
 
-
-
+  <p>
     <%= f.label :photo, "Image" %>
     <%= f.file_field :photo %>
+  </p>
 
+  <p>
+    <%= f.label :category, "Choisir la catégorie :"  %>
+    <%= f.select :category, ["Santé", "Recettes", "Bien-être", "Santé au féminin", "Parentalité", "Lifestyle"] %>
+    <%= f.label :subcategory, "Choisir la sous-catégorie :"  %>
+    <%= f.select :subcategory, ["Vegan", "Méditation", "Sommeil", "Beauté", "Alimentation"] %>
+
+  </p>
 
   <!--<p>
     <%= f.label :category, "Choisir la catégorie :"  %>
-    <%= f.select :category, ["Santé", "Recettes", "Bien-être", "Santé au féminin", "Parentalité", "Lifestyle"] %>
+    <%= f.select :category, Category.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
   </p>
 
   <p>
@@ -21,31 +39,31 @@
     <%= f.select :subcategory, Subcategory.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
   </p>-->
 
-  <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :-->
-
+  <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :
+  <p>
     <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
     <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
-
+  </p>-->
 
   <!--<p>
     <%= f.label :reading_time, "Temps de lecture" %>
     <%= f.text_field :reading_time %>
   </p>-->
 
-
+  <!--<p>
     <%= f.label :description, "Description" %>
     <%= f.text_area :description %>
+  </p>
 
-
-
+  <p>
     <%= f.label :rich_body, "Texte" %><br>
     <%= f.rich_text_area :rich_body %>
+  </p>
 
-
-
+  <p>
     <%= f.submit "Créer l'article", class: 'btn btn-primary' %>
-
-<% end %>
+  </p>
+<% end %>-->
   <!-- bouton back -->
   <%= link_to 'Retour', articles_path %>
 
