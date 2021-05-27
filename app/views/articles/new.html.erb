@@ -2,8 +2,8 @@
 
 <%= simple_form_for @article do |f| %>
   <%= f.input :title %>
-  <%= f.association :category, label: "Catégorie" %>
-  <%= f.association :subcategory, label: "Sous-catégorie" %>
+  <%= f.input :category, collection: Category.all, label_method: :name, value_method: :id,label: "Catégorie", include_blank: false, selected: @article.category_id %>
+  <%= f.input :subcategory, collection: Subcategory.all, label_method: :name, value_method: :id,label: "Sous-catégorie", include_blank: false, selected: @article.subcategory_id %>
   <%= f.input :photo, as: :file, label: "image" %>
   <%= f.input :description, label: "Description" %>
   <%= f.input :rich_body, as: :rich_text_area, label: "Texte" %>
