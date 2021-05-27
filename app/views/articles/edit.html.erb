@@ -1,48 +1,16 @@
 <h1>Edit an  article</h1>
 
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title, "Titre" %>
-    <%= f.text_field :title %>
-  </p>
-
-  <p>
-    <%= f.label :photo, "Image" %>
-    <%= f.file_field :photo %>
-  </p>
-
-  <p>
-    <%= f.label :category, "Choisir la catégorie :"  %>
-    <%= f.select :category_id, options_from_collection_for_select(Category.all, "id", "category_name", f.object.category_id) %>
-  </p>
-
-  <p>
-    <%= f.label :subcategory, "Choisir la sous-catégorie :"  %>
-    <%= f.select :subcategory, Subcategory.all.collect {|c| [c.name, c.id]}, :multiple => "multiple" %>
-  </p>
-
-  <!-- fomulaire avec cat et sub imbriquées (mauvais affichage en production) :
-  <p>
-    <%= f.label :subcategory_id, "Choisir la sous-catégorie :" %>
-    <%= f.grouped_collection_select :subcategory_id, Category.all, :subcategories, :name, :id, :name, { id: 'subcategory-select'} %>
-  </p>-->
-
-  <!--<p>
-    <%= f.label :reading_time, "Temps de lecture" %>
-    <%= f.text_field :reading_time %>
-  </p>-->
-
-  <p>
-    <%= f.label :rich_body, "Texte" %><br>
-    <%= f.rich_text_area :rich_body %>
-  </p>
-  <p>
-    <%= f.submit "Modifier l'article", class: 'btn btn-primary' %>
-  </p>
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :subcategory, collection: Subcategory.all, label: "Sous-catégorie", include_blank: false %>
+  <%= f.input :photo, as: :file, label: "image" %>
+  <%= f.input :description, label: "Description" %>
+  <%= f.input :rich_body, as: :rich_text_area, label: "Texte" %>
+  <%= f.button :submit %>
 <% end %>
 
-  <!-- bouton back -->
-  <%= link_to 'Retour', articles_path %>
+<!-- bouton back -->
+<%= link_to 'Retour', articles_path %>
 
 <!-- affiche un message si erreur présente -->
 <% if @article.errors.any? %>
