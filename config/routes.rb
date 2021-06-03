@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/services', to: 'pages#services'
   get '/contact', to: 'pages#contact'
-  #resources :users
+  resources :users
   resources :articles
   resources :categories
   resources :subcategories
