@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   validates :title, presence: true#, length: { minimum: 3, maximum: 100 }
   validates :rich_body, presence: true#, length: { minimum: 50 }
   belongs_to :user, optional: true
-  #belongs_to :category, optional: true
+  belongs_to :category
   belongs_to :subcategory, optional: true
+
 end
