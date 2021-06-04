@@ -2,22 +2,18 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
     <% end %>
-  <a class="liens"><%= link_to "Qui suis-je ?", "about" %></a>
-  <a class="liens"><%= link_to "Mes services", "services"%></a>
-  <a class="liens"><%= link_to "Mon blog", "articles"%></a>
-  <a class="liens"><%= link_to "Contact", "contact"%></a>
+  <%= link_to "Qui suis-je ?", "/about", class: "liens" %>
+  <%= link_to "Mes services", "/services", class: "liens" %>
+  <%= link_to "Mon blog", "/articles", class: "liens" %>
+  <%= link_to "Contact", "/contact", class: "liens" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <!-- <li class="nav-item active">
-          <span class="nav-link"><%= current_user.email %></span>
-        </li> -->
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
