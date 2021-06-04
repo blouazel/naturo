@@ -2,10 +2,10 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
     <% end %>
-  <a class="liens"><%= link_to "Qui suis-je ?", "about" %></a>
-  <a class="liens"><%= link_to "Mes services", "services"%></a>
-  <a class="liens"><%= link_to "Mon blog", "articles"%></a>
-  <a class="liens"><%= link_to "Contact", "contact"%></a>
+  <%= link_to "Qui suis-je ?", "/about", class: "liens" %>
+  <%= link_to "Mes services", "/services", class: "liens" %>
+  <%= link_to "Mon blog", "/articles", class: "liens" %>
+  <%= link_to "Contact", "/contact", class: "liens" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
