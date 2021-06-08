@@ -6,5 +6,4 @@ class Article < ApplicationRecord
   belongs_to :user, optional: true
   belongs_to :category
   belongs_to :subcategory, optional: true
-
 end

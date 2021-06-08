@@ -2,6 +2,21 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
+  def index
+    @categories = Category.all
+
+    cate = params[:cate]
+
+    if !cate.nil?
+      @article = Article.where(:category_id => cate)
+    else
+      @article = Article.all
+    end
+  end
+
+  def show
+  end
+
   def new
     @article = Article.new
     authorize @article
@@ -19,9 +34,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def edit
   end
 
@@ -32,18 +44,6 @@ class ArticlesController < ApplicationController
     else
       flash[:notice] = "L'article n'a pas été mis à jour"
       render 'edit'
-    end
-  end
-
-  def index
-    @categories = Category.all
-
-    cate = params[:cate]
-
-    if !cate.nil?
-      @article = Article.where(:category_id => cate)
-    else
-      @article = Article.all
     end
   end
 
