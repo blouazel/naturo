@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 <div class="subcategory">
-  <%= link_to 'Santé' %>
-  <%= link_to 'Recettes' %>
-  <%= link_to 'Bien-être' %>
-  <%= link_to 'Santé au féminin' %>
-  <%= link_to 'Périnatalité' %>
-  <%= link_to 'Lifestyle' %>
+  <% @categories.each do |category| %>
+    <%= link_to category.name, articles_path(:cate => category.id) %>
+  <% end %>
 </div>
-=======
+
 <h1>Showing selected article</h1>
->>>>>>> parent of 7ccb64b... front pages home services & contact
 
 <h2>
   <%= @article.title %>
