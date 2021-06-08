@@ -1,20 +1,32 @@
 <div class="subcategory">
-  <%= link_to 'Santé' %>
-  <%= link_to 'Recettes' %>
-  <%= link_to 'Bien-être' %>
-  <%= link_to 'Santé au féminin' %>
-  <%= link_to 'Périnatalité' %>
-  <%= link_to 'Lifestyle' %>
+
+
+
+  <% @categories.each do |category| %>
+    <%= link_to category.name, articles_path(:cate => category.id) %>
+  <% end %>
+
+
+
+
+
+  <%#= link_to 'Santé' %>
+  <%#= link_to 'Recettes' %>
+  <%#= link_to 'Bien-être' %>
+  <%#= link_to 'Santé au féminin' %>
+  <%#= link_to 'Périnatalité' %>
+  <%#= link_to 'Lifestyle' %>
 </div>
+
 <% @article.each do |article| %>
   <div class="card-article">
      <%= cl_image_tag article.photo.key, width: 500 %>
      <div class="card-article-infos">
         <div>
-        <h2><%= article.title %></h2>
+          <h2><%= article.title %></h2>
         </div>
         <div>
-        <p><%= article.description %></p>
+          <p><%= article.description %></p>
         </div>
         <div class="links">
           <% if policy(article).edit? %>

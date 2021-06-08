@@ -36,7 +36,15 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @article = Article.all
+    @categories = Category.all
+
+    cate = params[:cate]
+
+    if !cate.nil?
+      @article = Article.where(:category_id => cate)
+    else
+      @article = Article.all
+    end
   end
 
   def destroy
