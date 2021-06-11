@@ -6,7 +6,7 @@
   <%= f.input :subcategory_id, collection: Subcategory.all, label: "Sous-catégorie", include_blank: true %>
   <%= f.input :photo, as: :file, label: "Image" %>
   <%= f.input :description, label: "Description", :as => :text, input_html: { :style=> 'width: 100%;', :rows => 6} %>
-  <%= f.input :rich_body, as: :rich_text_area, label: "Texte", class: "customized-min-height" %>
+  <%= f.input :rich_body, as: :rich_text_area, label: "Texte" %>
   <%= f.button :submit %>
 <% end %>
 
