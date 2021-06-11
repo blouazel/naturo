@@ -8,9 +8,10 @@ class ArticlesController < ApplicationController
     cate = params[:cate]
 
     if !cate.nil?
-      @article = Article.where(:category_id => cate)
+      @article = Article.where(:category_id => cate).order('updated_at DESC')
     else
-      @article = Article.all
+      @article = Article.all.order('updated_at DESC')
+      #@article = Article.order('updated_at DESC')
     end
   end
 
