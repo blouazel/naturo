@@ -11,7 +11,6 @@ class ArticlesController < ApplicationController
       @article = Article.where(:category_id => cate).order('updated_at DESC')
     else
       @article = Article.all.order('updated_at DESC')
-      #@article = Article.order('updated_at DESC')
     end
   end
 
