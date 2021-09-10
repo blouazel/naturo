@@ -1,8 +1,34 @@
 <div class="subcategory">
   <% @categories.each do |category| %>
     <%= link_to category.name, articles_path(:cate => category.id) %>
+    <% category.subcategories.each do |subcategory| %>
+      <% link_to subcategory.name, articles_path(subcategory: subcategory.name) %>
+    <% end %>
   <% end %>
 </div>
+
+<div class="subcategory">
+  <% @subcategories.each do |subcategory| %>
+    <%= link_to subcategory.name, articles_path(:subcate => subcategory.id) %>
+  <% end %>
+</div>
+
+<!-- <div class="subcategory">
+    <%= link_to "Bien-être", articles_path(:cate => 4) %>
+    <%= link_to "Recettes", articles_path(:cate => 1) %>
+    <%= link_to "Santé", articles_path(:cate => 5) %>
+    <%= link_to "Santé au féminin", articles_path(:cate => 7) %>
+    <%= link_to "Sport", articles_path(:cate => 8) %>
+    <%= link_to "Lifestyle", articles_path(:cate => 6) %>
+</div>   -->
+
+<%# <div class="subcategory">
+<%#   <% @subcategories.each do |subcategory| %>
+<%#     <% if subcategory.id = 2 %>
+<%#       <%= link_to subcategory.name %>
+<%#     <% end %>
+<%#   <% end %>
+<%# </div>    %>
 
 <% @article.each do |article| %>
   <div class="card-article">
