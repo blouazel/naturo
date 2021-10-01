@@ -28,7 +28,7 @@
 
 <% @article.each do |article| %>
   <div class="card-article">
-     <a href="<%= article_url(article) %>"> <%= cl_image_tag article.photo.key, height: 280 %> </a>
+     <a href="<%= article_url(article) %>"> <%= cl_image_tag article.photo.key, width: 500, height: 280 %> </a>
      <div class="card-article-infos">
         <div>
           <h2><a href="<%= article_url(article) %>"> <%= article.title %> </a></h2>
