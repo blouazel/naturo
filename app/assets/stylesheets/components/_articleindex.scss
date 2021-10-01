@@ -1,8 +1,33 @@
-.subcategory {
+.category {
   display: flex;
   justify-content: space-around;
   margin: 10px;
+  list-style-type: none;
 }
+
+nav ul {
+  list-style-type: none;
+}
+
+.dropdown-toggle {
+  margin: 0;
+  padding: 0;
+}
+.dropdown-menu {
+  padding-left: 6px;
+  padding-right: 5px;
+}
+
+ul a:hover {
+  border-bottom: 1px solid;
+//  display: block;
+}
+
+//.subcategory {
+//  display: none;
+//}
+
+
 
 .card-article {
   position: relative;
@@ -44,7 +69,7 @@
   margin-top: 8px;
 }
 
-.subcategory a {
+.category a {
   text-decoration: none;
   color: rgba(0,0,0,0.7);
 }
