@@ -1,8 +1,60 @@
-<div class="subcategory">
+<!-- <div class="subcategory">
   <% @categories.each do |category| %>
+    <div class="subcategory">
     <%= link_to category.name, articles_path(:cate => category.id) %>
+    </div>
+    <div class="subcategory">
+    <% @subcategories.each do |subcategory| %>
+      <% if category.id == 1 %>
+        <%= link_to subcategory.name, articles_path(:subcate => subcategory.id) %>
+      <% end %>
+    <% end %>
+    </div>
+
   <% end %>
-</div>
+</div>  -->
+
+    <ul class="category">
+      <li> <%= link_to "Bien-être", articles_path(:cate => 1) %> </li>
+      <li class="btn-group pull-right right-nav">
+        <button type="button" class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span clas="sr-only"><%= link_to "Recettes", articles_path(:cate => 2) %></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li> <%= link_to "Apéritifs et entrées", articles_path(:subcate => 6) %> </li>
+          <li> <%= link_to "Pains et brioches", articles_path(:subcate => 5) %> </li>
+          <li> <%= link_to "Cakes salés", articles_path(:subcate => 4) %> </li>
+          <li> <%= link_to "Tartes et quiches", articles_path(:subcate => 3) %> </li>
+          <li> <%= link_to "Muffins et gauffres", articles_path(:subcate => 2) %> </li>
+          <li> <%= link_to "Plats divers", articles_path(:subcate => 7) %> </li>
+          <li> <%= link_to "Cakes sucrés", articles_path(:subcate => 8) %> </li>
+          <li> <%= link_to "Gâteaux aux fruits", articles_path(:subcate => 9) %> </li>
+          <li> <%= link_to "Gâteaux au chocolat", articles_path(:subcate => 10) %> </li>
+          <li> <%= link_to "Biscuits et cookies", articles_path(:subcate => 11) %> </li>
+          <li> <%= link_to "Dessert divers", articles_path(:subcate => 12) %> </li>
+          <li> <%= link_to "Petits déjeuners", articles_path(:subcate => 13) %> </li>
+        </ul>
+      </li>
+      <li> <%= link_to "Santé", articles_path(:cate => 3) %> </li>
+      <li> <%= link_to "Santé au féminin", articles_path(:cate => 4) %> </li>
+      <li> <%= link_to "Sport", articles_path(:cate => 5) %> </li>
+      <li> <%= link_to "Lifestyle", articles_path(:cate => 6) %> </li>
+    </ul>
+
+
+
+
+
+<!-- <div class="subcategory">
+  <% @subcategories.each do |subcategory| %>
+    <% if !subcategory.nil? %>
+      <%= link_to subcategory.name, articles_path(:subcate => subcategory.id) %>
+    <% else %>
+      <% link_to "hello world" %>
+    <% end %>
+  <% end %>
+</div> -->
 
 <% @article.each do |article| %>
   <div class="card-article">

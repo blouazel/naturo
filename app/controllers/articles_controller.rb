@@ -4,11 +4,15 @@ class ArticlesController < ApplicationController
 
   def index
     @categories = Category.all
+    @subcategories = Subcategory.all
 
     cate = params[:cate]
+    subcate = params[:subcate]
 
     if !cate.nil?
       @article = Article.where(:category_id => cate).order('updated_at DESC')
+    elsif !subcate.nil?
+      @article = Article.where(:subcategory_id => subcate).order('updated_at DESC')
     else
       @article = Article.all.order('updated_at DESC')
     end
