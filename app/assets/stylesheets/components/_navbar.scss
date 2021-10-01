@@ -14,3 +14,25 @@
   text-decoration: none;
   color: rgba(0,0,0,0.7);
 }
+
+// TRANSITION FOR NAVBAR ITEMS HOVER :
+
+//ul a:hover {
+//  border-bottom: 1px solid;
+//  display: block;
+//}
+
+.navbar a:after{
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width .4s ease, background-color .4s ease;
+}
+
+.navbar a:hover:after{
+  width: 100%;
+  background: black;
+}

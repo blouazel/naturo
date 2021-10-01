@@ -5,10 +5,6 @@
   list-style-type: none;
 }
 
-nav ul {
-  list-style-type: none;
-}
-
 .dropdown-toggle {
   margin: 0;
   padding: 0;
@@ -18,14 +14,32 @@ nav ul {
   padding-right: 5px;
 }
 
-ul a:hover {
-  border-bottom: 1px solid;
-//  display: block;
+.dropdown-toggle::after {
+    color: #F4F4F4;
 }
 
-//.subcategory {
-//  display: none;
+// TRANSITION FOR CATEGORIES AND SUBCATEGORIES HOVER :
+
+//ul a:hover {
+//  border-bottom: 1px solid;
+//  display: block;
 //}
+
+ul a:after{
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width .4s ease, background-color .4s ease;
+}
+
+ul a:hover:after{
+  width: 100%;
+  background: black;
+}
+
 
 
 
