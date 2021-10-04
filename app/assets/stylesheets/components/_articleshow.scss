@@ -1,0 +1,55 @@
+.articleimg {
+  display: block;
+  text-align: center;
+}
+
+.articleimg img {
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  border-radius: 10px;
+}
+
+.articledisplay {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.displaycat {
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.5;
+  padding: 0 10px 10px;
+}
+
+.articledisplay h2 {
+  padding-bottom: 30px;
+}
+
+.articlebody {
+  padding: 30px;
+}
+
+.articlelinks {
+  text-align: right;
+}
+
+@media only screen and (min-width: 350px) {
+  .articledisplay {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+}
+
+@media only screen and (min-width: 550px) {
+  .articledisplay {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+}
+
+@media only screen and (min-width: 950px) {
+  .articledisplay {
+  padding: 0 20% 0;
+}
+}
