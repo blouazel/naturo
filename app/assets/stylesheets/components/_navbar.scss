@@ -1,7 +1,17 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar {
+  background: white;
+  justify-content: space-between;
+}
 .navbar-brand {
   display: block;
   text-align: center;
   padding: 12px 30px 12px 12px;
+  margin: 0;
   margin-top: 3px;
 }
 
@@ -9,26 +19,25 @@
   width: 60%;
 }
 
-.pagesLinks {
-  justify-content: space-between;
+.navbar-lewagon a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.7);
 }
 
-@media only screen and (min-width: 740px) {
+
+
+
+@media only screen and (min-width: 575px) {
+    .navbar {
+      justify-content: space-between;
+    }
     .navbar-lewagon {
       justify-content: space-between;
       background: white;
     }
 
-    .navbar-lewagon .navbar-collapse {
-      flex-grow: 0;
-    }
-
-    .navbar-lewagon .navbar-brand img {
-      width: 100px;
-    }
-    .navbar-lewagon a {
-      text-decoration: none;
-      color: rgba(0,0,0,0.7);
+    .nav-link {
+      font-size: 0.95em;
     }
 
     .navbar a:after{
@@ -44,5 +53,35 @@
     .navbar a:hover:after{
       width: 100%;
       background: black;
+    }
+
+    .navbar-lewagon .navbar-collapse {
+      flex-grow: 0;
+    }
+
+    .navbar-lewagon .navbar-brand img {
+      width: 120px;
+    }
+    .navbar-brand {
+      padding: 0 30px 0 12px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .nav-link {
+      font-size: 1.15em;
+    }
+    .nav-item {
+      padding-left: 1px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .nav-link {
+      font-size: 1.25em;
+      padding-left: 70px;
+    }
+    .nav-item {
+      padding-left: 70px;
     }
 }
