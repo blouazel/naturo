@@ -1,38 +1,48 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 100px;
-}
-.navbar-lewagon a {
-  text-decoration: none;
-  color: rgba(0,0,0,0.7);
-}
-
-// TRANSITION FOR NAVBAR ITEMS HOVER :
-
-//ul a:hover {
-//  border-bottom: 1px solid;
-//  display: block;
-//}
-
-.navbar a:after{
-  content: '';
+.navbar-brand {
   display: block;
-  margin: auto;
-  height: 1px;
-  width: 0px;
-  background: transparent;
-  transition: width .4s ease, background-color .4s ease;
+  text-align: center;
+  padding: 12px 30px 12px 12px;
+  margin-top: 3px;
 }
 
-.navbar a:hover:after{
-  width: 100%;
-  background: black;
+.navbar-brand img {
+  width: 60%;
+}
+
+.pagesLinks {
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 740px) {
+    .navbar-lewagon {
+      justify-content: space-between;
+      background: white;
+    }
+
+    .navbar-lewagon .navbar-collapse {
+      flex-grow: 0;
+    }
+
+    .navbar-lewagon .navbar-brand img {
+      width: 100px;
+    }
+    .navbar-lewagon a {
+      text-decoration: none;
+      color: rgba(0,0,0,0.7);
+    }
+
+    .navbar a:after{
+      content: '';
+      display: block;
+      margin: auto;
+      height: 1px;
+      width: 0px;
+      background: transparent;
+      transition: width .4s ease, background-color .4s ease;
+    }
+
+    .navbar a:hover:after{
+      width: 100%;
+      background: black;
+    }
 }
