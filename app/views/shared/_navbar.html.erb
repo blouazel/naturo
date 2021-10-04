@@ -2,10 +2,12 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
     <% end %>
-  <%= link_to "Qui suis-je ?", "/about", class: "liens" %>
-  <%= link_to "Mes services", "/services", class: "liens" %>
-  <%= link_to "Mon blog", "/articles", class: "liens" %>
-  <%= link_to "Contact", "/contact", class: "liens" %>
+
+  <!--<div class="pagesLinks">
+      <%= link_to "Qui suis-je ?", "/about", class: "liens" %>
+      <%= link_to "Mes services", "/services", class: "liens" %>
+      <%= link_to "Mon blog", "/articles", class: "liens" %>
+      <%= link_to "Contact", "/contact", class: "liens" %> -->
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,6 +15,18 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Qui suis-je ?", "/about", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Mes services", "/services", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Mon blog", "/articles", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Contact", "/contact", class: "nav-link" %>
+      </li>
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <% if current_user.avatar.attached? %>
@@ -34,3 +48,4 @@
     </ul>
   </div>
 </div>
+
