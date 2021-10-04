@@ -3,6 +3,12 @@
   justify-content: space-around;
   margin: 10px;
   list-style-type: none;
+  padding: 0;
+}
+
+.categoryItem {
+  padding-left: 6px;
+  font-size: 13px;
 }
 
 .dropdown-toggle {
@@ -19,11 +25,6 @@
 }
 
 // TRANSITION FOR CATEGORIES AND SUBCATEGORIES HOVER :
-
-//ul a:hover {
-//  border-bottom: 1px solid;
-//  display: block;
-//}
 
 ul a:after{
   content: '';
@@ -105,3 +106,27 @@ ul a:hover:after{
   bottom: 24px;
   right: 24px;
 }
+
+@media only screen and (min-width: 575px) {
+  .card-article {
+    width: 90%;
+  }
+  .categoryItem {
+  padding-left: 6px;
+  font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .categoryItem {
+    padding-left: 8px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .card-article {
+    width: 90%;
+  }
+}
+
