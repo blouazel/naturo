@@ -1,6 +1,5 @@
 .services {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .services p {
@@ -12,11 +11,32 @@
 }
 
 .servicesinfos {
-  width: 60%;
-  padding: 50px;
+  width: 90%;
+  padding: 10px;
 }
 
 .servicesform {
   width: 40%;
   padding: 50px;
+}
+
+@media only screen and (min-width: 700px) {
+    .servicesinfos {
+      width: 80%;
+      padding: 30px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+  .services {
+    display: flex;
+    align-items: center;
+  }
+  .services .servicesform {
+    max-width: 50%;
+  }
+  .servicesinfos {
+    width: 60%;
+    padding: 50px;
+  }
 }
