@@ -16,8 +16,17 @@
   border-radius: 10px;
 }
 
-.contact p, h2 {
+.contact p, h2{
 text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact h1 {
@@ -27,6 +36,18 @@ padding-bottom: 12px;
 
 .details {
   padding: 20px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.8);
+  transition: color .3s;
+  font-size: 20px;
+  padding: 0px 8px;
+}
+
+.contact a:hover {
+  color : #547b84;
 }
 
 @media only screen and (min-width: 700px) {
