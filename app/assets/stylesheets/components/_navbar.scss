@@ -22,10 +22,8 @@
 .navbar-lewagon a {
   text-decoration: none;
   color: rgba(0,0,0,0.7);
+  //color: #547b84;
 }
-
-
-
 
 @media only screen and (min-width: 575px) {
     .navbar {
@@ -78,6 +76,7 @@
 
 @media only screen and (min-width: 1100px) {
     .nav-link {
+      //color: #547b84;
       font-size: 1.25em;
       padding-left: 70px;
     }
