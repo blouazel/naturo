@@ -2,17 +2,17 @@
   position: relative;
   overflow: hidden;
   height: auto;
-  display: flex;
-  align-items: center;
   margin: 16px;
 }
 
 .contact img {
-  max-width: 50%;
+  max-width: 80%;
   height: auto;
   box-shadow: 0 0 15px rgba(0,0,0,0.8);
   object-fit: cover;
-  margin: 24px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 10px;
 }
 
@@ -22,9 +22,22 @@ text-align: center;
 
 .contact h1 {
 text-align: center;
-padding-bottom: 50px;
+padding-bottom: 12px;
 }
 
-.adress {
+.details {
   padding: 20px;
+}
+
+@media only screen and (min-width: 700px) {
+  .contact {
+    display: flex;
+    align-items: center;
+  }
+  .contact img {
+    max-width: 50%;
+  }
+  .contact h1 {
+    padding-bottom: 50px;
+  }
 }
