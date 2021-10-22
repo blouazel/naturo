@@ -39,13 +39,13 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.mail.yahoo.com",
-    port: 465,
-    domain: "yahoo.com",
+    address: "mail.gandi.net",
+    port: 587,
+    domain: "gandi.net",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "myemailaddress@yahoo.com",
-    password: "********"
+    user_name: "briac@rado2loc.com",
+    password: "rushGTE35"
   }
   # config.action_mailer.perform_caching = false
 
