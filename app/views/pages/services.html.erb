@@ -13,11 +13,11 @@
     </ul>
   </div>
   <div class="servicesform">
-    <H2>FORMULAIRE DE CONTACT</H2>
+    <H2>Laissez-moi un message avec vos coordonnées, je vous recontacterai avec plaisir !</H2>
       <form action="/send_contact" method="post">
-      <input name="mail" type="email" class="form-control mb-1" placeholder="Votre email">
-      <input name="nom" type="text" class="form-control mb-1" placeholder="Votre prénom">
-      <textarea name="texte" class="form-control" placeholder="Votre message"></textarea>
+      <%-# <input name="email" type="email" class="form-control mb-1" placeholder="Votre email">  -%>
+      <%-# <input name="nom" type="text" class="form-control mb-1" placeholder="Votre prénom">  -%>
+      <textarea name="message" class="form-control" placeholder="Votre message"></textarea>
       <input type="hidden" value="<%= form_authenticity_token() %>" name="authenticity_token"/>
       <button type="submit">Envoyer !</button>
     </form>

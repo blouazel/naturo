@@ -14,6 +14,6 @@ class PagesController < ApplicationController
   end
 
   def send_contact
-    ContactformMailer.contactform(params[:nom]).deliver
+    ContactformMailer.contactform(params[:message]).deliver
   end
 end
