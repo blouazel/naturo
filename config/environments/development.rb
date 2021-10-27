@@ -45,7 +45,7 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "justine.feuerstoss@just-o-naturel.com",
-    password: "Justine@28230"
+    password: "*****"
   }
   # config.action_mailer.perform_caching = false
 
