@@ -73,8 +73,8 @@ Rails.application.configure do
     domain: "gandi.net",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: MAIL_USERNAME,
-    password: MAIL_PASSWORD
+    user_name: ENV['MAIL_USERNAME'],
+    password: ENV['MAIL_PASSWORD']
   }
   #config.action_mailer.perform_caching = false
 
@@ -125,5 +125,6 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  config.action_mailer.default_url_options = { host: 'just-o-naturel.com' }
+  #config.action_mailer.default_url_options = { host: 'just-o-naturel.com' }
+
 end

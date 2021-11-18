@@ -14,6 +14,10 @@ class PagesController < ApplicationController
   end
 
   def send_contact
-    ContactformMailer.contactform(params[:message]).deliver
+    nom = params[:nom]
+    email = params[:email]
+    message = params[:message]
+    ContactformMailer.contactform(message, email, nom).deliver
+    redirect_to services_path, notice: 'Votre message a bien été envoyé !'
   end
 end
