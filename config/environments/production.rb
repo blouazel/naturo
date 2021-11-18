@@ -71,8 +71,8 @@ Rails.application.configure do
     address: "mail.gandi.net",
     port: 587,
     domain: "gandi.net",
-  #  authentication: "plain",
-  #  enable_starttls_auto: true,
+    authentication: "plain",
+    enable_starttls_auto: true,
   #  user_name: MAIL_USERNAME,
   #  password: MAIL_PASSWORD
   }
