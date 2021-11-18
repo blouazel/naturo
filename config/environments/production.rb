@@ -60,23 +60,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "naturo_production"
 
-  # 18-11-2021 Config for sending email with contact form:
-  config.action_mailer.default charset: 'utf-8'
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'just-o-naturel.com' }
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: "mail.gandi.net",
-    port: 587,
-    domain: "gandi.net",
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: MAIL_USERNAME,
-    password: MAIL_PASSWORD
-  }
-
-  #config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
