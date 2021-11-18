@@ -67,15 +67,15 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'just-o-naturel.com' }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.smtp_settings = {
-  #  address: "mail.gandi.net",
+  config.action_mailer.smtp_settings = {
+    address: "mail.gandi.net",
   #  port: 587,
   #  domain: "gandi.net",
   #  authentication: "plain",
   #  enable_starttls_auto: true,
   #  user_name: MAIL_USERNAME,
   #  password: MAIL_PASSWORD
-  #}
+  }
   #config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
