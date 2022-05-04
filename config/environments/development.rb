@@ -44,8 +44,11 @@ Rails.application.configure do
     domain: "gandi.net",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: MAIL_USERNAME,
-    password: MAIL_PASSWORD
+    #modif du 25-05_2022
+    user_name: ENV['MAIL_USERNAME'],
+    password: ENV['MAIL_PASSWORD']
+    #user_name: MAIL_USERNAME,
+    #password: MAIL_PASSWORD
   }
   # config.action_mailer.perform_caching = false
 
