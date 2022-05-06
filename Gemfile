@@ -12,6 +12,9 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 
+#06_05_2022
+gem 'bundler', '2.3.4'
+
 # degug trial 19 mai 2021
 gem 'sassc', '~> 2.0', '>= 2.0.1'
 
