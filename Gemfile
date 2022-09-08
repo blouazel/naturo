@@ -13,7 +13,9 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 
 #06_05_2022
-gem 'bundler', '2.3.4'
+# gem 'bundler', '2.3.4'
+#09_09_2022
+gem 'bundler', '~> 2.3'
 
 # degug trial 19 mai 2021
 gem 'sassc', '~> 2.0', '>= 2.0.1'
